@@ -1,13 +1,14 @@
-kartenStapel = ["gr7", "gl2", "+4"]
-while len(kartenStapel) != 0 :
-    print(kartenStapel)
-    aktuelleKarte = kartenStapel.pop(0)
+import random
 
-    if aktuelleKarte == "+4" :
-        print("+4 kann gespielt werden.")
+anzWurf = 0
+while anzWurf <3:
+    anzWurf = anzWurf + 1
+    wurf = random.randint(1,6)
+    print(wurf)
+    if wurf == 6:
         break
-
-if len(kartenStapel) == 0 :
-    print("Stapel ist leer")
-
-
+if wurf == 6:
+    while wurf == 6 and anzWurf <3 :
+        anzWurf = anzWurf + 1
+        wurf = random.randint(1,6)
+        print(wurf)
