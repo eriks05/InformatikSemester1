@@ -109,12 +109,12 @@ anzWürfe = 0
 
 while pos < 100:
     wurf = random.randint(1,6)
-    print("Du hast eine " + str(wurf) + " geworfen")
+    print(f"Du hast eine {wurf} geworfen")
     pos = pos + wurf
     anzWürfe = anzWürfe + 1
-    print("Du bist jetzt auf Feld " + str(pos))
+    print(f"Du bist jetzt auf Feld {pos}")
     if pos in leiterspiel_dict and leiterspiel_dict[pos] != 0:
         pos += leiterspiel_dict[pos]
-        print("Du bist durch eine Leiter auf Feld " + str(pos) + " gelandet")
+        print(f"Du bist durch eine Leiter auf Feld {pos} gelandet")
 
-print("Du hast "+ str(anzWürfe) + " Würfe gebraucht")
+print(f"Du hast {anzWürfe} Würfe gebraucht")
